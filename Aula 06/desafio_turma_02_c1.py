@@ -16,14 +16,14 @@ programa de banco
 conta_corrente = "123456-7"
 senha_usuario = "9999"
 saldo_atual = 0
-limite_saldo_negativo = -500.00
+limite_saldo_negativo = 500.00
 nome_usuario = "José"
 
-while true:
+while True:
     for i in range(3):
         conta = input("Entre com a sua conta corrente: ")
         senha = input("Entre com sua senha: ")
-        if conta == conta_correnteand senha == senha_usuario:
+        if conta == conta_corrente and senha == senha_usuario:
             print(f"Bem vindo {nome_usuario}")
             acesso_permitido = True
             break
@@ -33,14 +33,14 @@ while true:
     if not acesso_permitido:
         break
 
-    while true:
+    while True:
         opcao = input("Escolha uma opção:\n" \
         "1- Ver saldo.\n" \
         "2- Sacar valor.\n" \
         "3- Depositar.\n" \
         "4- Pagar Boleto.\n" \
         "5- Alterar senha.\n" \
-        "6- Sair.\n"))
+        "6- Sair.\n")
        
        
         if opcao == "1":
@@ -76,7 +76,7 @@ while true:
                 print("Saldo insuficiente!")
         elif opcao == "6":
             print("Atendimento Finalizado")
-            break
+break
         else:
-            print("Opção Inválda")
+            print("Opção Inválida!")
 
