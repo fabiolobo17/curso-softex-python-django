@@ -5,5 +5,7 @@ for contador in range(1,6):
     if ten == numero:
         print("Você acertou!")
         break
-    elif:
-        print("Você errou!")
+    elif ten > numero:
+        print("Você errou! Muito Alto")
+    elif ten < numero:
+        print("Você errou! Muito baixo")
