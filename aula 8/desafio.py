@@ -14,17 +14,25 @@ else:
     print("Erro, digite um numero inteiro positivo valido")
     
 lado2 = input("Insira o segundo lado do triangulo: ")
-    if lado2.isdigit():
+if lado2.isdigit():
         l2 = int(lado2)
         print("Segundo lado =", l2)
-    else:
+else:
         print("Erro, digite um numero inteiro positivo valido")
 
-Lado3 = input("Insira o terceiro lado do triangulo: ")
-    if lado3.isdigit():
+lado3 = input("Insira o terceiro lado do triangulo: ")
+if lado3.isdigit():
         l3 = int(lado3)
         print("Terceiro lado =", l3)
-    else:
+else:
         print("Erro, digite um numero inteiro positivo valido")
-if l1 < l2 + l3 and l2 < l1 + l3 and l3 < l1 + l2 and l1> (l2 - l3).abs() and
-    l2 > l1 - l3 and l3 > l1 - l2:
+if(
+l1 < l2 + l3 and 
+l2 < l1 + l3 and
+l3 < l1 + l2 and
+l1 > abs(l2 - l3) and
+l2 > abs(l1 - l3) and
+l3 > abs(l1 - l2)):
+    print("Os valores podem formar um triangulo valido")
+else:
+    print("Os valores nao podem formar um triangulo")
