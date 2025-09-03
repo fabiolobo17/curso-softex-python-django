@@ -6,6 +6,9 @@ for nome,nota in notas:
         nota_maxima == nota
 print(f"A maior nota é {nota_maxima}")
 
+alunos_maior_nota = []
 for nome,nota in notas:
-    if nota_maxima
+    if nota == nota_maxima:
+        alunos_maior_nota.append(nome)
+        
 
