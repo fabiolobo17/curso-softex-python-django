@@ -2,6 +2,7 @@ registros_acessos = []
 usuarios_ok = set()
 tempo_total = 0
 
+
 while True:
     # Pedir o nome do usuário e validar
     while True:
