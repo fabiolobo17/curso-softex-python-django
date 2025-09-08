@@ -9,7 +9,7 @@ while True:
         if usuario.lower() == 'parar':
             break
         if not usuario.isalpha():
-            print("⚠ O nome deve conter apenas letras. Tente novamente.\n")
+            print("O nome deve conter apenas letras. Tente novamente.\n")
             continue
         # Nome válido
         break
@@ -20,13 +20,15 @@ while True:
     # Laço para garantir que o status seja válido
     while True:
         try:
-            status = int(input("Digite '1' para 'sucesso' e '2' para 'falha': "))
+            status = int(input("""\nDigite:
+            1 - sucesso 
+            2 - falha\n"""))
         except ValueError:
-            print("⚠ Erro: digite apenas 1 ou 2.\n")
+            print("Erro: digite apenas 1 ou 2.\n")
             continue
 
         if status not in (1, 2):
-            print("⚠ Responda com 1 ou 2 apenas.\n")
+            print("Responda com 1 ou 2 apenas.\n")
             continue
 
         break  # status válido
@@ -37,7 +39,7 @@ while True:
             duracao = int(input("Digite a duração da sessão em minutos: "))
             break
         except ValueError:
-            print("⚠ Erro: a duração deve ser um número inteiro. Tente novamente.\n")
+            print("Erro: a duração deve ser um número inteiro. Tente novamente.\n")
 
     # Definindo status em texto e atualizando dados
     status_texto = "sucesso" if status == 1 else "falha"
@@ -48,7 +50,6 @@ while True:
     # Adiciona o registro à lista
     registros_acessos.append((usuario, status_texto, duracao))
 
-# ---- Saída final ----
-print("\n📌 Registro de acessos:", registros_acessos)
-print("📌 Usuários com acesso bem-sucedido:", usuarios_sucesso)
-print("📌 Tempo total de sessões bem-sucedidas:", tempo_total, "minutos")
+print("\n Registro de acessos:", registros_acessos)
+print("Usuários com acesso bem-sucedido:", usuarios_sucesso)
+print("Tempo total de sessões bem-sucedidas:", tempo_total, "minutos")
