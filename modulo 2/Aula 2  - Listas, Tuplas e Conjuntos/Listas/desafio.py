@@ -20,7 +20,9 @@ while True:
     # Laço para garantir que o status seja válido
     while True:
         try:
-            status = int(input("Digite '1' para 'sucesso' e '2' para 'falha': "))
+            status = int(input("Digite:\n
+            1 - sucesso 
+            \n2 - falha"))
         except ValueError:
             print("Erro: digite apenas 1 ou 2.\n")
             continue
@@ -48,7 +50,7 @@ while True:
     # Adiciona o registro à lista
     registros_acessos.append((usuario, status_texto, duracao))
 
-# ---- Saída final ----
+# 
 print("\n Registro de acessos:", registros_acessos)
 print("Usuários com acesso bem-sucedido:", usuarios_sucesso)
 print("Tempo total de sessões bem-sucedidas:", tempo_total, "minutos")
