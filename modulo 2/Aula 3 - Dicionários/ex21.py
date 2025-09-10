@@ -1,21 +1,18 @@
-agenda = {}
+contatos = {}
+
 while True:
+    opcao = input("Digite: 1(Adicionar Contato), 2(Buscar), 3(Sair) ")
 
-    escolha = int(input("""\n 1  - para adicionar contato
-    2 - buscar contato
-    3 - Sair\n""")) 
-
-
-    try:
-        if escolha == 1:
-            contato = input("Digite um nome: ").lower()
-            if contato in agenda:
-                    print("Contato já existe")
-                    continue
-            else:
-                    telefone = int(input("Digite um telefone: "))
-                    agenda[contato] = telefone
-        if escolha == 2:
-            for contato, telefone in agenda:
-                print(telefone)
-                
+    if opcao == "1":
+        nome = input("Digite o nome do contato: ").lower()
+        numero = input("Digite o número do contato:")
+        contatos[nome] = numero
+    elif opcao == "2":
+        nome = input("Digite o nome do contato: ").lower()
+        contato = contatos.get(nome, "Contato não encontrado!")
+        print(contato)
+    elif opcao == "3":
+        print("Encerrando Programa!")
+        break
+    else:
+        print("Opção inválida")
