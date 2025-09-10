@@ -1,27 +1,52 @@
-jogadores = {"fabio": 40, "pedro": 25, "felipe": 15}
+pontuacao_jogadores = {
+    "Alice": 50,
+    "Bob": 75,
+    "Charlie": 120,
+}
 
-while True:
-    
+print("--- Pontuações Iniciais ---")
+print(pontuacao_jogadores)
+print("-" * 30)
 
+jogador_especifico = "Alice"
+print(f"Simulando uma rodada de jogo para '{jogador_especifico}'.")
 
-    
-    
-    try:
+try:
+    pontos_ganhos = int(input(f"Quantos pontos {jogador_especifico} ganhou? "))
 
-        jogador = input("Escolha o jogador(ou digite 'Sair'): ").lower()
-        ponto = int(input("Qual a pontuação quer adicionar: "))
-        if jogador == "sair":
-            break
-    
-    except ValueError:
-        print("Entrada inválida. Digite um número positivo.")
-        continue
-        for nome, pontos in jogadores:
-    if jogadores[nome] != jogador:
-        jogadores[mome] = ponto
-
+    if jogador_especifico in pontuacao_jogadores:
+        pontuacao_jogadores[jogador_especifico] += pontos_ganhos
+        print(f"'{jogador_especifico}' ganhou {pontos_ganhos} pontos.")
+        print(
+            f"Nova pontuação de '{jogador_especifico}': {pontuacao_jogadores[jogador_especifico]}"
+        )
     else:
-            jogadores[nome][pontos] += ponto
+        print(f"Erro: O jogador '{jogador_especifico}' não foi encontrado.")
 
-print("f\ Jogadores: {jogadores}")
-        
+except ValueError:
+    print("Entrada inválida. Por favor, digite um número inteiro para os pontos.")
+
+print("-" * 30)
+
+print("--- Adicionar e Pontuar Novo Jogador ---")
+
+try:
+    novo_jogador = input("Digite o nome do novo jogador: ")
+    pontuacao_inicial = int(input(f"Digite a pontuação inicial de '{novo_jogador}': "))
+
+    pontuacao_jogadores[novo_jogador] = pontuacao_inicial
+    print(f"'{novo_jogador}' adicionado com {pontuacao_inicial} pontos.")
+
+    pontos_extras = int(
+        input(f"Quantos pontos '{novo_jogador}' ganhou em uma rodada? ")
+    )
+    pontuacao_jogadores[novo_jogador] += pontos_extras
+    print(f"Pontuação de '{novo_jogador}' atualizada.")
+
+except ValueError:
+    print("Entrada inválida. Por favor, digite um número inteiro para a pontuação.")
+
+print("-" * 30)
+
+print("--- Pontuações Finais ---")
+print(pontuacao_jogadores)
