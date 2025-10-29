@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"gosto de programar".split()
-=======
 # Lista de todas as vogais minúsculas (com e sem acento)
 VOGAIS = [
     "a", "e", "i", "o", "u",
@@ -57,4 +54,3 @@ def analisar_frase(frase: str) -> None:
 # Programa principal
 frase_usuario: str = input("Digite uma frase para analisar: ")
 analisar_frase(frase_usuario)
->>>>>>> 07b2aa8353e43a23484a4f73c0bc47af1ecfbac6
