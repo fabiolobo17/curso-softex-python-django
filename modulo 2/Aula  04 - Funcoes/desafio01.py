@@ -1,0 +1,1 @@
+"gosto de programar".split()
