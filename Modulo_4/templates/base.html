@@ -4,8 +4,13 @@
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>{% block title %}Meu Site Django{% endblock %}</title> <link rel="stylesheet" href="{% 
-static 'css/style.css' %}"> 
+    <title>
+        {% block title %}
+        Meu Site Django
+        {% endblock %}
+
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 </head> 
 <body> 
     <header> 
@@ -15,8 +20,9 @@ static 'css/style.css' %}">
     </header> 
  
     <main> 
-        {% block content %} 
-            {% endblock %} 
+        {% block content %}
+
+        {% endblock %} 
     </main> 
      
     <footer> 

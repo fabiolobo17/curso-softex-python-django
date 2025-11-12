@@ -1,5 +1,7 @@
 {% extends 'base.html' %} 
-{% block title %}Página Inicial - Meu Site{% endblock %} 
+{% block title %}
+Página Inicial - Meu Site
+{% endblock %} 
 {% block content %} 
 <h1>Olá, {{ nome_usuario }}!</h1> 
 <p>Este HTML está separado do meu código Python.</p> 
@@ -16,7 +18,7 @@
 {% if tarefa.concluida %} 
 (✓ Concluída) 
 {% else %} 
-(☐ Pendente) 
+(X Pendente) 
 {% endif %} 
 <br> 
 <small>Criada em: {{ tarefa.criada_em }}</small> 
@@ -25,7 +27,15 @@
 <li>Você ainda não tem tarefas cadastradas.</li> 
 {% endfor %} 
 </ul>
-{% if nome_usuario == 'Júnior' %} 
-<p>Este é um conteúdo especial para o Júnior!</p> 
+<hr> 
+<h3>Nova Tarefa:</h3> 
+<form method="POST"> 
+{% csrf_token %} 
+{{ form.as_p }} 
+<button type="submit">Adicionar Tarefa</button> 
+</form> 
+<hr> 
+{% if nome_usuario == 'Fabio' %} 
+<p>Este é um conteúdo especial para o Fabio!</p> 
 {% endif %} 
 {% endblock %} 
